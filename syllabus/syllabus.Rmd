@@ -1,0 +1,162 @@
+---
+output: 
+  pdf_document:
+      template: template.tex
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+\begin{center}
+{\Large \textsc{PSTAT 115: Introduction to Bayesian Data Analysis}}
+\end{center}
+\begin{center}
+Fall 2020
+\end{center}
+
+\begin{center}
+\rule{6in}{0.4pt}
+\begin{minipage}[t]{.75\textwidth}
+\begin{tabular}{llcccll}
+\textbf{Instructor:} & Alexander Franks & & &  & \textbf{Time:} & M/W 11:00-12:15\\
+\textbf{Email:} &
+                  \href{mailto:afranks@pstat.ucsb.edu}{afranks@pstat.ucsb.edu}
+                                        & & & & \textbf{Zoom link:} & 
+\end{tabular}
+\end{minipage}
+\rule{6in}{0.4pt}
+\end{center}
+\vspace{.5cm}
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+
+
+\noindent\textbf{Course Pages:}
+\begin{enumerate}
+\item \url{https://gauchospace.ucsb.edu/courses/course/view.php?id=32033}
+\item \url{https://piazza.com/class/keu3ggkmq8p66x}
+\begin{itemize}
+\item Use \url{} to sync new assignments and labs
+\end{itemize}
+\end{enumerate}
+
+
+
+
+\vskip.15in
+\noindent\textbf{Office Hours:}
+
+\noindent Professor Franks: \url{afranks@pstat.ucsb.edu} OH   Thursday 
+
+\noindent TBD \url{}: OH 4-6pm Thursday 
+
+\noindent TBD \url{}: OH 3-5pm Friday in 5431 B
+
+\vskip.15in
+\noindent\textbf{Course Texts} 
+
+\begin{itemize}
+\item \textbf{Required:} Peter Hoff {\textit{A First Course in Bayesian
+      Statistical Methods}};  \url{https://www.springer.com/us/book/9780387922997}). (pdf available on the course website)
+\item Optional: Jim Albert {\textit{Bayesian Computation with R}};
+  \url{https://www.springer.com/us/book/9780387922973}).
+  \item Optional: Andrew Gelman, John Carlin et al. {\textit{Bayesian
+        Data Analysis}};  \url{http://www.stat.columbia.edu/~gelman/book/}).
+\end{itemize} 
+
+\vskip.15in
+\noindent\textbf{Objectives:} 
+
+\vspace{1em}
+At the end of the course, a successful student will be able to:
+\begin{itemize}
+\item build and refine statistical models using the Bayesian paradigm
+\item utilize Monte Carlo methods for statistical inference
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Prerequisites:}
+PSTAT 120 A-B and 126 (or equivalent). Familiarity with R is required.
+
+\vspace*{.15in}
+
+\noindent \textbf{Tentative Course Topics:}
+\begin{center}
+\begin{minipage}{5in}
+\begin{flushleft}
+{\color{darkgreen}{\Rectangle}} ~ Review of frequentist inference\\
+{\color{darkgreen}{\Rectangle}} ~ One parameter models\\
+{\color{darkgreen}{\Rectangle}} ~ Monte Carlo computation\\
+{\color{darkgreen}{\Rectangle}} ~ The normal model\\
+{\color{darkgreen}{\Rectangle}} ~ Markov chain Monte Carlo\\
+{\color{darkgreen}{\Rectangle}} ~ Hierarchical models\\
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+\pagebreak
+
+\vspace*{.15in}
+\noindent\textbf{Grading Policy:}
+\begin{itemize}
+\item Homework (30\%).
+  \begin{itemize}
+    \item There will be approximately 6 homeworks, due roughly every
+     week on Sundays at midnight.\\
+      \item You are allowed (and encouraged)   to work with a partner. You need only turn in one homework per pair.  If you need help finding a partner, start with the ``Search for
+  Teammates'' tool on Piazza.  Homework solutions must be done in
+  RMarkdown and turned in on GauchoSpace.  We have provided a homework
+  template that you can use to get started.\\
+\item All code must be written to be reproducible in Rmarkdown
+\item  All derivations can be done in any format of your choosing (latex, written by hand) but must be legible and \emph{must be converted to a pdf}.
+\item  All files must be zipped together and submitted to Gauchospace
+\item  Ask a TA \emph{early} if you have problems regarding submissions. 
+  \item Homework not submitted online before the deadline will
+  be considered late (10 point deduction). 24 hours after the deadline
+  homework will not be accepted and no credit will be awarded. Do not
+  wait until the night before it is due to start working!
+  \end{itemize}
+
+\item Midterm exam (20\%). \textbf{submitted November 9, 2020} . 
+\item 10\% quizzes
+  \begin{itemize}
+    \item Approximately 5 in quizzes.  You have two attempts.
+      dropped.
+     \item There is no make-up for missed quizzes.
+    \end{itemize}
+\item Lab attendance (10\%)
+  \begin{itemize}
+    \item Lab attendance is required and essential.  Your
+    attendance will be noted in each lab.
+    \end{itemize}
+\item Final exam submitted \textbf{Monday December 16, 2020}  (30\%).  
+\end{itemize}
+
+\noindent{\textbf{Homeworks:}
+
+\begin{itemize}
+\item  All files will be submitted electronically via GauchoSpace
+\item  Submit a zip file containing:
+  \begin{enumerate}
+    \item R markdown code (.Rmd file, template provided)\\
+    \item Any additional files as needed\\
+    \item Generated PDF file
+  \end{enumerate}
+\end{itemize}
+\vskip.15in
+\noindent\textbf{Important Dates:}
+\begin{center} \begin{minipage}{3.8in}
+    \begin{flushleft}
+Midterm \dotfill ~  November 9, 2020 (take home)\\
+Final Exam \dotfill ~ December 16, 2020 (take home)\\
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+\vskip.15in
+\noindent\textbf{Course Policies:}  
+\begin{itemize}
+\item Please sign up for Piazza: \url{piazza.com/ucsb/fall2020/pstat115}.  All questions related to course content, homework, R programming and quizzes should be done on Piazza. \textit{Only questions pertaining to grades or personal issues should be handled over email}.
+\item Regular attendance is essential and expected!
+\end{itemize}
