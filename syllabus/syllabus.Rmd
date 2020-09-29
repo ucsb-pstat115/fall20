@@ -22,7 +22,7 @@ Fall 2020
 \textbf{Instructor:} & Alexander Franks & & &  & \textbf{Time:} & M/W 11:00-12:15\\
 \textbf{Email:} &
                   \href{mailto:afranks@pstat.ucsb.edu}{afranks@pstat.ucsb.edu}
-                                        & & & & \textbf{Zoom link:} & 
+                                        & & & &  & 
 \end{tabular}
 \end{minipage}
 \rule{6in}{0.4pt}
@@ -34,10 +34,13 @@ Fall 2020
 
 \noindent\textbf{Course Pages:}
 \begin{enumerate}
-\item \url{https://gauchospace.ucsb.edu/courses/course/view.php?id=32033}
+
+\item \url{https://ucsb.zoom.us/j/86937803425?pwd=cnNnOUhZWUlkc2ZvN3JWUENiWGVmUT09}
+
+\item \url{https://gauchospace.ucsb.edu/courses/mod/forum/view.php?id=4471455}
 \item \url{https://piazza.com/class/keu3ggkmq8p66x}
 \begin{itemize}
-\item Use \url{} to sync new assignments and labs
+\item Use \url{https://bit.ly/32cO6dm} to sync new assignments and labs.  Bookmark this link, you will use it alot!
 \end{itemize}
 \end{enumerate}
 
@@ -61,6 +64,7 @@ Fall 2020
       Statistical Methods}};  \url{https://www.springer.com/us/book/9780387922997}). (pdf available on the course website)
 \item Optional: Jim Albert {\textit{Bayesian Computation with R}};
   \url{https://www.springer.com/us/book/9780387922973}).
+  \item Optional: Richard McElreath {\textit{Statistical Rethinking}};  \url{https://xcelab.net/rm/statistical-rethinking/}).  
   \item Optional: Andrew Gelman, John Carlin et al. {\textit{Bayesian
         Data Analysis}};  \url{http://www.stat.columbia.edu/~gelman/book/}).
 \end{itemize} 
@@ -77,7 +81,7 @@ At the end of the course, a successful student will be able to:
 
 \vskip.15in
 \noindent\textbf{Prerequisites:}
-PSTAT 120 A-B and 126 (or equivalent). Familiarity with R is required.
+PSTAT 120 A-B (probability and math-stat) and 126 (regression). Familiarity with R is required.
 
 \vspace*{.15in}
 
@@ -104,13 +108,13 @@ PSTAT 120 A-B and 126 (or equivalent). Familiarity with R is required.
   \begin{itemize}
     \item There will be approximately 6 homeworks, due roughly every
      week on Sundays at midnight.\\
-      \item You are allowed (and encouraged)   to work with a partner. You need only turn in one homework per pair.  If you need help finding a partner, start with the ``Search for
+      \item You are allowed to work with a partner. You need only turn in one homework per pair.  If you need help finding a partner, start with the ``Search for
   Teammates'' tool on Piazza.  Homework solutions must be done in
-  RMarkdown and turned in on GauchoSpace.  We have provided a homework
-  template that you can use to get started.\\
+  RMarkdown and turned in on Gradescope.  Each homework assignment will be given as a
+  template that you should work from.\\
 \item All code must be written to be reproducible in Rmarkdown
-\item  All derivations can be done in any format of your choosing (latex, written by hand) but must be legible and \emph{must be converted to a pdf}.
-\item  All files must be zipped together and submitted to Gauchospace
+\item  All derivations can be done in any format of your choosing (latex, written by hand) but must be legible and \emph{must be incorporated into your final pdf}.
+\item  All files must be zipped together and submitted to Gradescope
 \item  Ask a TA \emph{early} if you have problems regarding submissions. 
   \item Homework not submitted online before the deadline will
   be considered late (10 point deduction). 24 hours after the deadline
@@ -118,19 +122,18 @@ PSTAT 120 A-B and 126 (or equivalent). Familiarity with R is required.
   wait until the night before it is due to start working!
   \end{itemize}
 
-\item Midterm exam (20\%). \textbf{submitted November 9, 2020} . 
+\item Midterm exam (20\%). \textbf{Take home, due November 9, 2020} . 
 \item 10\% quizzes
   \begin{itemize}
-    \item Approximately 5 in quizzes.  You have two attempts.
-      dropped.
+    \item Approximately 5 in quizzes (online), lowest dropped
      \item There is no make-up for missed quizzes.
     \end{itemize}
-\item Lab attendance (10\%)
+\item Section attendance (15\%)
   \begin{itemize}
-    \item Lab attendance is required and essential.  Your
+    \item Section attendance is required and essential.  Your
     attendance will be noted in each lab.
     \end{itemize}
-\item Final exam submitted \textbf{Monday December 16, 2020}  (30\%).  
+\item Final exam \textbf{Take home, due Monday December 16, 2020}  (25\%).  
 \end{itemize}
 
 \noindent{\textbf{Homeworks:}
@@ -158,5 +161,5 @@ Final Exam \dotfill ~ December 16, 2020 (take home)\\
 \noindent\textbf{Course Policies:}  
 \begin{itemize}
 \item Please sign up for Piazza: \url{piazza.com/ucsb/fall2020/pstat115}.  All questions related to course content, homework, R programming and quizzes should be done on Piazza. \textit{Only questions pertaining to grades or personal issues should be handled over email}.
-\item Regular attendance is essential and expected!
+\item Regular attendance is strongly encouraged and can count toward you participationg grade!
 \end{itemize}
