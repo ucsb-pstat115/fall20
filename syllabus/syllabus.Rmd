@@ -33,28 +33,27 @@ Fall 2020
 
 
 \noindent\textbf{Course Pages:}
-\begin{enumerate}
-
-\item \url{https://ucsb.zoom.us/j/86937803425?pwd=cnNnOUhZWUlkc2ZvN3JWUENiWGVmUT09}
-
-\item \url{https://gauchospace.ucsb.edu/courses/mod/forum/view.php?id=4471455}
-\item \url{https://piazza.com/class/keu3ggkmq8p66x}
 \begin{itemize}
-\item Use \url{https://bit.ly/32cO6dm} to sync new assignments and labs.  Bookmark this link, you will use it alot!
+\item Link to live lecture: \url{https://ucsb.zoom.us/j/86937803425?pwd=cnNnOUhZWUlkc2ZvN3JWUENiWGVmUT09}
+\item Link to section / office hours: \url{ https://ucsb.zoom.us/j/87510865800?pwd=S1FUbUNKYnJOWmFBbHRvRU1sSDZYZz09}
+\item Gauchospace: \url{https://gauchospace.ucsb.edu/courses/mod/forum/view.php?id=4471455}
+\item Piazza: \url{piazza.com/ucsb/fall2020/pstat115}
+\item pstat115.lsit.ucsb.edu: Use \url{https://bit.ly/32cO6dm} to sync new assignments and labs.  
+\begin{itemize}
+\item Bookmark this link, you will use it alot!
 \end{itemize}
-\end{enumerate}
-
+\end{itemize}
 
 
 
 \vskip.15in
 \noindent\textbf{Office Hours:}
 
-\noindent Professor Franks: \url{afranks@pstat.ucsb.edu} OH   Thursday 
+\noindent Professor Franks: \url{afranks@pstat.ucsb.edu} Office Hours, Wednesday 2pm
 
-\noindent TBD \url{}: OH 4-6pm Thursday 
+\noindent Xubo Liu \url{xubo@ucsb.edu}: Office Hours TBD
 
-\noindent TBD \url{}: OH 3-5pm Friday in 5431 B
+\noindent Dorothy Li \url{dorothyli@pstat.ucsb.edu}: Office Hours TBD
 
 \vskip.15in
 \noindent\textbf{Course Texts} 
@@ -128,18 +127,18 @@ PSTAT 120 A-B (probability and math-stat) and 126 (regression). Familiarity with
     \item Approximately 5 in quizzes (online), lowest dropped
      \item There is no make-up for missed quizzes.
     \end{itemize}
-\item Section attendance (15\%)
+\item Section attendance (10\%)
   \begin{itemize}
     \item Section attendance is required and essential.  Your
-    attendance will be noted in each lab.
+    attendance will be noted.  
     \end{itemize}
-\item Final exam \textbf{Take home, due Monday December 16, 2020}  (25\%).  
+\item Final exam (30\%). \textbf{Take home, due Monday December 16, 2020}
 \end{itemize}
 
-\noindent{\textbf{Homeworks:}
+\noindent{\textbf{Homeworks:}}
 
 \begin{itemize}
-\item  All files will be submitted electronically via GauchoSpace
+\item  All files will be submitted electronically via Gradescope
 \item  Submit a zip file containing:
   \begin{enumerate}
     \item R markdown code (.Rmd file, template provided)\\
