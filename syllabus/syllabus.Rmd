@@ -38,7 +38,7 @@ Fall 2020
 \item Link to section / office hours: \url{ https://ucsb.zoom.us/j/87510865800?pwd=S1FUbUNKYnJOWmFBbHRvRU1sSDZYZz09}
 \item Gauchospace: \url{https://gauchospace.ucsb.edu/courses/mod/forum/view.php?id=4471455}
 \item Piazza: \url{piazza.com/ucsb/fall2020/pstat115}
-\item pstat115.lsit.ucsb.edu: Use \url{https://bit.ly/32cO6dm} to sync new assignments and labs.  
+\item pstat115.lsit.ucsb.edu: Use \url{https://bit.ly/3kZ2sVr} to sync new assignments and labs.  
 \begin{itemize}
 \item Bookmark this link, you will use it alot!
 \end{itemize}
