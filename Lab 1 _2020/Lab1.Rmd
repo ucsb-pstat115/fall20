@@ -1,0 +1,216 @@
+---
+title: "PSTAT 115 Section 1"
+output:
+  pdf_document: default
+  word_document: default
+  html_document:
+    pdf_print: paged
+date: "10/04/2020"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(ggplot2)
+```
+
+Key ideas:
+
+1. How to use server to do homework
+2. Notations
+3. Likelihood function: how they are defined, what they look like, $L(\theta)$ notation, proportionality and plotting in R
+4. Maximum Likelihood Estimator (MLE) and its functional invariance
+5. Sufficiency
+6. Bayestian and Frequentist differences
+
+### 1. Demonstration of how to use the server, pulling the assignment with the link and making a copy of the .rmd file to do homeworks
+
+### 2. Notations:
+#### a) Random Variable and Realization of a Random Variable
+- A Random Variable is a variable whose values depend on outcomes of a random event.
+  
+  + The height of 100 randomly selected human beings. $Y_1, Y_2, \dots, Y_{100}$
+      
+- Realization of a random variable is the outcome of one random event. 
+       
+  + We find 100 human beings and measure their heights. $y_1, y_2, \dots, y_{100}$
+
+  
+#### b) Population and Sample
+- Population is a set of similar items or events which is of interest for some questions or experiments.
+  
+  + The height of all human beings.
+  
+- Sample is a set of data collected from a population by a defined method.
+
+  + If we find 100 students in UCSB and measure their heights, then the heights of those 100 students forms a sample of heights of human beings with sample size 100. Of course, this sample is not representative and we need a better sampling method.
+
+- If we want to know what is the mean height of all human beings (Property of the population, we call it parameter), we have to measure the height of each human beings, which is not feasible. Instead, we take a sample, which has much smaller size compared to the number of human beings and use the sample mean to inference about the population mean.
+
+  + Can you suggest some better ways to get a representative sample than measuring the heights of 100 UCSB students?
+  
+#### c) Estimator and Estimate
+- Estimator is a random variable. It gives a rule to estimate the parameter from a sample.
+
+  + We randomly select 10,000 human beings and the mean height is the estimator of mean height of all human beings. $$\bar{Y}=\sum_{i=1}^{10,000} Y_i  /n$$
+
+- Estimates is the corresponding realization of the estimator.
+
+  + Say we have already selected 10,000 human beings and measured their heights ($y_1, y_2, \dots, y_{10,000}$). Then the estimate is $$\bar{y}=\sum_{i=1}^{10,000} y_i  /n$$
+
+```{r echo = FALSE, message=FALSE}
+library(imager)
+im <- load.image('central_dogma_inference.png')
+plot(im)
+```
+
+### 3. Likelihood and Log-likelihood
+
+#### a) Let $X_1, X_2,\dots, X_n \sim N(\mu,1)$. The dataset obtained is $x_1,x_2,\dots,x_n$. Find the likelihood, log-likelihood and proportional simplification. What is the MLE?
+
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+
+
+
+#### b) Let's assume $n=100$ and we get our dataset from the follow codes. Plot the log-likelihood function.
+```{r}
+set.seed(123)
+n <- 100
+x <- rnorm(100, mean = 0, sd=1)
+```
+
+```{r}
+L <- function(mu){#Log-Likelihood Function
+  -n/2*(mean(x)-mu)^2
+}
+p <- ggplot(data = data.frame(mu = 0), mapping = aes(x=mu))+stat_function(fun = L)+
+     xlim(-5,5)+scale_y_continuous(name = "Likelihood")
+p #plot log-likelihood function against mu
+p+geom_vline(xintercept = mean(x), color = 'red') #identify the MLE
+```
+
+### c) Let $X_1, X_2,\dots, X_n \sim Bernoulli(p)$. The dataset obtained is $x_1,x_2,\dots,x_n$. Find the likelihood, log-likelihood, proportional simplification and MLE. Then plot the log-likelihood function with respect to p assuming we have the following data:
+```{r}
+set.seed(123)
+n <- 100
+x <- rbinom(n, 1, 0.5)
+```
+
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+
+```{r}
+L <- function(p){#Log-Likelihood Function
+  sum(x)*log(p)+(n-sum(x))*log(1-p)
+}
+p <- ggplot(data = data.frame(p = 0), mapping = aes(x=p))+stat_function(fun = L)+
+     xlim(0,1)+scale_y_continuous(name = "Likelihood")
+p #plot log-likelihood function against mu
+p+geom_vline(xintercept = mean(x), color = 'red') #identify the MLE
+```
+
+
+### 4. Let $X_1, X_2,\dots, X_n \sim N(\mu,\sigma^2)$. The dataset obtained is $x_1,x_2,\dots,x_n$.
+#### a) Find the MLE of $\mu$, $\sigma^2$.
+
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+
+#### b) Find the MLE of $\mu^3$
+
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+
+
+
+### 5. Sufficiency 
+
+Sufficient statistics summarize all the information in a sample about a target parameter.
+$$
+\begin{aligned}
+&\text{Let } Y_1, Y_2, \dots, Y_n \text{ denote a random sample from a probability distribution with unknown parameter } \theta. \\ 
+&\text{Then the statistic } U = g(Y_1, Y_2, \dots, Y_n) \text{ is said to be sufficient for } \theta \text{ if the conditional distribution of }\\
+&Y_1, Y_2, \dots, Y_n \text{ given } U \text{, does not depend on } \theta.  \\
+&\text{Let } U \text{ be a statistic based on the random sample }Y_1, Y_2, \dots, Y_n. \\
+&\text{Then U is a sufficient statistic for the estimation of a parameter } \theta \text{ if and only if the likelihood } \\
+&L(\theta) = L(y_1, y_2, \dots, y_n) \text{ can be factored into two nonnegative functions, } \\
+&L(y_1, y_2, \dots, y_n| \theta) = g(u, \theta)  * h(y_1, y_2, \dots, y_n) \\
+& \text{where } g(u, \theta) \text{ is a function only of } u \text{ and } \theta \text{ and }h(y_1, y_2, \dots, y_n) \text{ is not a function of } \theta.
+\end{aligned}
+$$
+
+#### a)
+$$ 
+\begin{aligned}
+& \text{Let } Y_1, Y_2, \dots, Y_n \text{ be a random sample in which } Y_i \text{ possesses the probability density function } f(y_i|\theta) = \frac{1}{\theta} e^{\frac{-y_i}{\theta}} \\
+&\text{ where } 0 \leq y_i  < \infty \text{ and } \theta > 0, i = 1,2,\dots,n. \text{ Find a sufficient statistic.} \\
+\end{aligned}
+$$
+\hfill\break
+\hfill\break
+\hfill\break
+\hfill\break
+
+### 6. Comparison between Bayesian and Frequentist
+
+- In frequentist inference, unknown parameters treated as constants
+
+     + Estimators are random (due to sampling variability)
+     
+- In Bayesian inference, unknown parameters are random variables.
+  + Need to specify a prior distribution for $\theta$ - The prior can be uninformative or informative.
+  + Gather data
+  + Update your prior distribution with the data using Bayes’ theorem, resulting in posterior distribution. The posterior distribution is a probability distribution that represents your updated beliefs about the parameter after having seen the data.
+  + Analyze the posterior distribution and summarize it (mean, median, sd, quantiles…)
+  
+- Confidence level differences  
+  + Bayesian confidence intervals describe information about the location of the true value of theta after observing Y. (Post experimental coverage)
+
+  + Frequentist confidence intervals describe the probability that the interval will cover the true value before the data is observed.  (Pre experimental coverage)
+
