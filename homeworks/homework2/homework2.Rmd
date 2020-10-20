@@ -8,9 +8,7 @@ output: pdf_document
 ```{r setup, include=FALSE}
 library(knitr)
 library(testthat)
-eval = TRUE
 knitr::opts_chunk$set(echo=TRUE, 
-                      eval = eval,
                       cache=FALSE, 
                       fig.width=5, 
                       fig.height=5,

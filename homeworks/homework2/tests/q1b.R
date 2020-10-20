@@ -6,7 +6,7 @@ cases:
   name: q1b1
   points: 0
 - hidden: false
-  name: q1b5
+  name: q1b6
   points: 1
 name: q1b
 
@@ -20,11 +20,6 @@ test_that("q1b1", {
   expect_equal(beta_B, 1)
 })
 
-test_that("q1b1", {
-  tol = 1e-2
-  expect_equal(A_post_mean, alpha_A_posterior / beta_A_posterior)
-})
-
-test_that("q1b5", {
+test_that("q1b6", {
   expect_true(all(length(alpha_A_quantile) == 2, length(alpha_B_quantile) == 2))
 })
