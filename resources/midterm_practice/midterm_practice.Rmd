@@ -1,0 +1,126 @@
+---
+title: "Midterm Practice"
+output: pdf_document
+---
+
+\section{Definitions to know}
+- Likelihood
+  + Identify proportionality constants that can be excluded
+- Cromwell's Rule
+- Sufficient Statistics
+- Data Generating Process
+- Bias, Variance, Mean Squared Error
+- Mixture Model
+- Conjugate Prior
+  + Pseudo-counts interpretations of conjugate priors
+- Improper Priors
+- Posterior Predictive Distribution
+  + Integral definition involving likelihood and posterior (or prior)
+- Posterior Predictive Model Checking
+  + Monte Carlo algorithm for checking
+- Law of the unconcsious statistician (LOTUS)
+- Monte Carlo error 
+  + How does the variance of our Monte Carlo 
+- Inversion Sampling
+- Rejection Sampling
+
+\section{Practice Problem 1}
+
+A machine produces products.  Suppose the time needed for producing products, in minutes, are random and independent.  Now we want to utilize our knowledge about Bayesian statistics to analyze this dataset. Suppose the time needed for one product follows an exponential distribution with rate $\lambda$, i.e. $Y_i \sim \text{ i.i.d Expo}(\lambda)$. \newline
+
+
+#. What is the population? What is the sample? What is the estimand we are interested in?
+#. Write out the data generating process for observation $y_1, y_2, \ldots, y_n$.
+#. Write out the log-likelihood function $\lambda$ based on observation $y_1, y_2, \ldots, y_n$.
+#. Compute the MLE based on the given data.
+#. Try to identify a conjugate prior distribution for $\lambda$ (among the distributions discussed in class).  The ______ prior distribution is the conjugate prior for the Exponential sampling model.
+#. Compute the resulting posterior distrbituion based on the prior you identified in the above question.
+#. Find the posterior mean of the posterior distribution.  What is the mode of the posterior mode of the distribution? The posterior model is called the maximum a posteriori (MAP) estimate.
+#. Assume $y_1, \ldots, y_n$ are (2, 30, 40, 10, 24, 14, 6, 8, 20, 35).  You believe \emph{a priori} that the mean production time should be about 20 minutes.  Choose prior parameters for your prior that reflects thsi belief (the prior variance can be anything you think is appropriate).  Compute numeric value for the posterior mean and modes.
+#. There are two kinds of intervals we learned for summarizing the posterior distribution: central interval and HPD (Highest posterior density), please describe how you would construct the 95\% central interval and the 95\% HPD in words.
+#. Which interval/region for $\lambda$ is shorter? Interpret the central interval you created from the above problem. How is this different from the frequentist confidence interval?
+#. Let $\tilde{y}$ be the time required to produce the next product.  Compute the posterior predictive distribution. i.e.
+$p(\tilde{y} | y_1, ..., y_n )$.
+
+
+\section{Practice Problem 2}
+
+#. Poisson-Gamma Practice.
+    #. Assume $y_i \sim \text{ i.i.d Pois}(\lambda_, \nu_i)$ where $\nu_i$ is the exposure for observation $i$.  Write out the likelihood for $\lambda$ given observations $y_1, ... y_n$.  Simplify by removing proportionality constants.
+    #.  Assume the prior $p(\lambda) \sim \text{Gamma}(a, b)$.  What is the posterior distribution for $\lambda$?
+    #.  How do we interpret a and b in terms of pseudo-counts?
+    #.  Find the posterior mean.  Write it in terms of a weighted average of the MLE and the prior mean.
+
+#. Beta-Bernoulli practice
+    #. Assume $y_i \sim \text{ i.i.d Bernoulli}(\theta)$.  Write out the likelihood for $\theta$ given observations $y_1, ... y_n$.  Simplify by removing proportionality constants.
+    #.  Assume the prior $p(\theta) \sim \text{Beta}(a, b)$.  What is the posterior distribution for $\theta$?
+    #.  How do we interpret a and b in terms of pseudo-counts?
+    #.  Find the posterior mean.  Write it in terms of a weighted average of the MLE and the prior mean.
+    
+\section{Multiple Choice Practice}
+
+**Make sure you know _why_ each of the right answers is true.**
+
+#. You observe $Y_i \sim Binom(10, \theta)$ for $i = 1, 2, ... n$, where $n=100$ observations.  _Circle all_ sufficient statistics for $\theta$
+
+    #. $y_1, y_2, ... y_n$
+    #. $\sum_{i=1}^n y_i$
+    #. $\frac{\sum_{i=1}^n y_i}{n}$
+    #. median($y_1, y_2, ... y_n$)
+    #. $y_1$
+
+#. Circle all _true_ statements:
+    #. An estimator is a random variable and an estimate is a constant
+    #. An estimator is a constant and an estimate is a random variable
+    #. In classical frequentist inference, parameters are considered unknown constants and in Bayesian inference parameters are considered unknown random variables.
+    #. In classical frequentist inference, parameters are considered unknown random variables and in Bayesian inference parameters are unknown considered constants.
+    #. The bias of an estimator is defined as $E[\hat \theta - \theta]$ -->
+    #. The variance of an estimator is defined as $E[(\hat \theta - \theta)^2]$ -->
+    
+
+
+#. In Bayesian statistics, _conjugacy_ refers to the setting in which
+
+    #. The sampling distribution and the prior distribution are in the same model family
+    #. The sampling distribution and the posterior distribution are in the same model family
+    #. The prior distribution and the posterior distribution are in the same model family
+    #. The predictive distribution is in the same family as the sampling distribution
+
+
+#. Fill in both blanks
+
+    #.  The _______ distribution is the conjugate prior distribution for the Binomial model.
+    #.  The _______ distribution is the conjugate prior distribution for the Poisson model.
+
+#. For a random variable with a Beta($\alpha$, $\beta$) distribution (circle one):
+
+    #.  As $\alpha + \beta$ increases, the variance of the random variable  decreases
+    #.  As $\alpha + \beta$ increases, the variance of the random variable increases
+
+#. For a $95\%$ Bayesian credible interval:
+
+    #.  The interval is random and will cover the parameter $95\%$ of the time
+    #.  The quantile interval is always shorter than the HPD interval
+    #.  $\theta$ is random and $Pr(l(y) < \theta < u(y) \mid y) = 0.95$
+    #.  Only the likelihood is needed to derive the interval.
+
+#. Select all answers that are true.  The posterior predictive distribution
+    #. depends on unknown parameters
+    #. is often used as a tool for model checking
+    #. incorporates sampling variability and variability due to uncertainty about the parameter
+    #. is obtained by integrating out future observations, $\tilde y$, from a joint model.
+
+#. For both the the Gamma-Poisson (Gamma prior, Poisson sampling model) and the Beta-Binomial model (Beta prior, Binomial sampling model), the posterior mean of the parameter 
+
+    #. can be expressed as a weighted average between the prior mean and the maximum likelihood estimate
+    #. can be expressed as a weighted average between the predictive mean and the maximum likelihood estimate
+    #. can be expressed as a weighted average between the prior mean and the predictive mean
+    #. does not depend on prior parameters
+
+
+#. Let $\gamma = g(\theta)$ for some function $g$.  We are interested in the posterior mean of $\gamma$ but only have the posterior distribution of $\theta$, $p(\theta \mid y)$.  The Law of the Unconscious Statistician (LOTUS) says (circle one)
+
+    #.  It is necessary to use the method of transformations to find the posterior distribution of $\gamma$
+    #.  We can compute $E[\gamma \mid y]$ by integrating $g(\theta)$ with respect to the posterior distribution of $\theta$
+    #. The integral for the posterior mean must computed numerically via simulation.
+    #. We must first compute the Jacobian, $|\frac{dg^{-1}(\gamma)}{d\gamma}|$.
