@@ -125,24 +125,24 @@ ld50_posterior_mean <- NULL # YOUR CODE HERE
 ```
 
 
-**1c.** Report the effective sample size for the ld50 samples using the `coda::effectiveSize` function.  Make a traceplot of    If `alpha_samples` were the name of the samples of the alpha parameter, then you can plot the traceplot using `coda::traceplot(as.mcmc(alpha_samples))`.  Improve upon this effective sample size from your first run by finding a new setting for `cov`.  _Hint:_ try variants of `k*diag(2)` for various values of $k$ to increase or decrease the proposal variance.  If you are ambitious, try proposing using a covariance matrix with non-zero correlation between the two parameters.  What effective sample size were you able to achieve? You should be able to at least double the effective sample size from your first run.  Plot the traceplot based on the new value of `cov`.  
+**1c.** Report the effective sample size for the alpha samples using the `coda::effectiveSize` function.  Make a traceplot of  the samples of the alpha parameter.  If `alpha_samples` were the name of the samples of the alpha parameter, then you can plot the traceplot using `coda::traceplot(as.mcmc(alpha_samples))`.  Improve upon this effective sample size from your first run by finding a new setting for `cov`.  _Hint:_ try variants of `k*diag(2)` for various values of $k$ to increase or decrease the proposal variance.  If you are ambitious, try proposing using a covariance matrix with non-zero correlation between the two parameters.  What effective sample size were you able to achieve? You should be able to at least double the effective sample size from your first run.  Plot the traceplot based on the new value of `cov`.   
 
 ```{r, echo=TRUE}
 library(coda)
 
 samples <- NULL # YOUR CODE HERE
-ld50_samples <- NULL # YOUR CODE HERE
+alpha_samples <- NULL # YOUR CODE HERE
 
-ld50_ess <- NULL # YOUR CODE HERE
+alpha_ess <- NULL # YOUR CODE HERE
 
 # TRACEPLOT HERE
 # YOUR CODE HERE
 
 ## Re run the sampler using your new setting of cov
-samples_new <- NULL # YOUR CODE HERE
-ld50_samples_new <- NULL # YOUR CODE HERE
+alpha_samples_new <- NULL # YOUR CODE HERE
+alpha_samples_new <- NULL # YOUR CODE HERE
 
-ld50_ess_new <- NULL # YOUR CODE HERE
+alpha_ess_new <- NULL # YOUR CODE HERE
 
 # TRACEPLOT HERE
 # YOUR CODE HERE

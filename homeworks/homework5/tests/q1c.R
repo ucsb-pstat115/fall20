@@ -10,5 +10,5 @@ name: q1c
 "
 
 test_that("q1c", {
-  expect_true(ld50_ess_new > ld50_ess)
+  expect_true(alpha_ess_new > alpha_ess)
 })
